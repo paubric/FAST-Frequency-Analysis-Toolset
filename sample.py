@@ -16,6 +16,10 @@ class Sample():
         words = self.data.split()
         return len(words)
 
+    def get_word_appearances(self, word):
+        words = self.data.split()
+        return words.count(word)
+
     def get_alphanum_count(self):
         alphanum_count = 0
         for char in self.data:
@@ -28,6 +32,9 @@ class Sample():
         for char in self.data:
             char_count += 1;
         return char_count
+
+    def get_char_appearances(self, char):
+        return self.data.count(char)
 
     def get_avg_word_len(self):
         word_count = self.get_word_count()
